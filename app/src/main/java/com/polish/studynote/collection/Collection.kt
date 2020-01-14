@@ -43,8 +43,8 @@ class Collection : Fragment() {
         // get a reference to the CollectionViewModel
         val collectionViewModel = ViewModelProviders.of(this, viewModelFactory).get(CollectionViewModel::class.java)
 
-        // add lifecycleOwner to the binding
-        binding.setLifecycleOwner(this)
+//        // add lifecycleOwner to the binding
+//        binding.setLifecycleOwner(this)
 
 
         // add binding to the collectionViewModel
@@ -58,7 +58,7 @@ class Collection : Fragment() {
         collectionViewModel.tasks.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.data = it
-                Toast.makeText(context, "$it", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Task Added", Toast.LENGTH_LONG).show()
             }
         })
 

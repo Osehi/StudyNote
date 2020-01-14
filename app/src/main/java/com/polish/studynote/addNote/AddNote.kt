@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 
 import com.polish.studynote.R
 import com.polish.studynote.database.Task
@@ -75,6 +76,9 @@ class AddNote : Fragment() {
         CoroutineScope(IO).launch {
             instanceOfAdd.insert(inputTask)
         }
+
+        val action = AddNoteDirections.actionAddNoteToCollection(inputTask)
+        findNavController().navigate(action)
 
 
     }

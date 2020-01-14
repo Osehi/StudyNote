@@ -4,19 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="8dp"
+    android:layout_marginTop="28dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/colorGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/screenTopicId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="68dp"
             android:text="@string/topic"
             android:textSize="@dimen/input_text"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +33,9 @@
             android:id="@+id/screenDateId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="68dp"
             android:text="@string/date"
             android:textSize="@dimen/input_text"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,11 +46,36 @@
             android:id="@+id/screenLocateId"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="68dp"
             android:text="@string/location"
             android:textSize="@dimen/input_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/screenDateId" />
+
+        <ImageView
+            android:id="@+id/deleteTaskId"
+            android:contentDescription="@string/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_delete_black_24dp" />
+
+        <ImageView
+            android:id="@+id/udatebuttonId"
+            android:contentDescription="@string/update_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/deleteTaskId"
+            app:layout_constraintStart_toStartOf="@+id/deleteTaskId"
+            app:layout_constraintTop_toBottomOf="@+id/deleteTaskId"
+            android:src="@drawable/ic_edit_black_24dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

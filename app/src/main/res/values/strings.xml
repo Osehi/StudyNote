@@ -9,5 +9,7 @@
     <string name="topic">Topic</string>
     <string name="date">Date</string>
     <string name="location">Location</string>
+    <string name="delete">Delete Button</string>
+    <string name="update_task">Update Button</string>
 
 </resources>
