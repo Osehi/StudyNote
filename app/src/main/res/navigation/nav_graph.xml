@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/collection">
+
+    <fragment
+        android:id="@+id/collection"
+        android:name="com.polish.studynote.collection.Collection"
+        android:label="Collection"
+        tools:layout="@layout/fragment_collection">
+        <action
+            android:id="@+id/action_collection_to_addNote"
+            app:destination="@id/addNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNote"
+        android:name="com.polish.studynote.addNote.AddNote"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_add_note" />
+</navigation>
