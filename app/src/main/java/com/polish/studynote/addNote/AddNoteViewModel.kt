@@ -45,7 +45,7 @@ class AddNoteViewModel(
         }
     }
 
-    private suspend fun insert(task:Task){
+   suspend fun insert(task:Task){
         withContext(Dispatchers.IO){
             database.insert(task)
         }

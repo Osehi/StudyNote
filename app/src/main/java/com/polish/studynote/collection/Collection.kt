@@ -58,7 +58,7 @@ class Collection : Fragment() {
         collectionViewModel.tasks.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.data = it
-                Toast.makeText(context, "view task", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "$it", Toast.LENGTH_LONG).show()
             }
         })
 
